@@ -1,4 +1,4 @@
-This Repo is all about my practice/Dump file.
+This Repo is all about my practice/dump file.
 
 I'll just keep uploading something I learn.
 
