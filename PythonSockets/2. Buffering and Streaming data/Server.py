@@ -1,0 +1,23 @@
+import socket
+import time
+
+HEADERSIZE = 10
+s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+s.bind((socket.gethostname(), 9999))
+s.listen(4)
+
+while True:
+    clientSocket, address = s.accept()
+    print(f"Connection from {address} has been established")
+
+    msg = "Welcome to the Server!!"
+    msg = f'{len(msg):<{HEADERSIZE}}'+msg
+    print(msg)
+
+    clientSocket.send(bytes(msg, "utf-8"))
+
+    while True:
+        time.sleep(3)
+        msg = f"The time is ! {time.time()}"
+        msg = f"{len(msg):<{HEADERSIZE}}" + msg
+        clientSocket.send(bytes(msg, "utf-8"))

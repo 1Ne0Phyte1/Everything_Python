@@ -1,0 +1,1 @@
+access.log, auth.log and vsftd.log these files are taken from TryHackMe.

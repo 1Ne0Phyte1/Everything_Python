@@ -1,0 +1,16 @@
+
+Step 1 : Changing default TLS10 to TLS12
+
+Powershell -Command "[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12"
+
+Step 2 : Installing python
+
+Powershell -Command  "Invoke-WebRequest -Uri 'https://www.python.org/ftp/python/3.9.7/python-3.9.7-amd64.exe' -OutFile 'c:/temp/python-3.7.0.exe'"
+
+    https://www.python.org/ftp/python/3.9.7/python-3.9.7.exe
+    https://www.python.org/ftp/python/3.9.7/python-3.9.7-amd64.exe
+
+    https://www.python.org/ftp/python/3.9.6/python-3.9.6.exe
+    https://www.python.org/ftp/python/3.9.6/python-3.9.6-amd64.exe
+
+Step 3: Powershell -Command "c:/temp/python-3.7.0.exe /quiet InstallAllUsers=0 PrependPath=1 Include_test=0"
