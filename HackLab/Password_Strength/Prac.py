@@ -1,5 +1,3 @@
-#!/usr/bin/python3
-import argparse
 import math
 import re
 import prettytable
